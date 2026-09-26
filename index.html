@@ -102,16 +102,19 @@ button,input,textarea,summary{touch-action:manipulation}
   border-bottom:3px solid var(--pink);padding-top:env(safe-area-inset-top)}
 .bar{height:var(--header-h);display:flex;align-items:center;justify-content:space-between;background:transparent}
 .brand{font-family:var(--display);font-weight:800;font-size:1.1rem;text-decoration:none;color:#fff;letter-spacing:-.01em}
-.menu-btn{display:flex;align-items:center;gap:.55rem;min-height:44px;padding:0 .25rem 0 .75rem;background:none;border:0;color:#fff;
-  font-family:var(--display);font-weight:800;font-size:1.05rem;cursor:pointer}
+.menu-btn{display:flex;align-items:center;gap:.65rem;min-height:44px;padding:.5rem 1rem;
+  background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.4);border-radius:10px;color:#fff;
+  font-family:var(--display);font-weight:800;font-size:1.05rem;letter-spacing:.02em;cursor:pointer}
+.menu-btn:active{background:rgba(255,255,255,.22)}
 .menu-btn .lines{display:flex;flex-direction:column;gap:5px}
-.menu-btn .lines i{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
-.menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--violet-deep);
-  border-bottom:1px solid rgba(255,255,255,.14);box-shadow:0 12px 24px rgba(0,0,0,.25)}
+.menu-btn .lines i{display:block;width:24px;height:3px;background:#fff;border-radius:2px}
+.menu{display:none;position:absolute;top:calc(100% + 8px);left:1rem;right:1rem;background:var(--violet-deep);
+  border:1px solid rgba(255,255,255,.16);border-radius:14px;box-shadow:0 16px 32px rgba(0,0,0,.32);overflow:hidden}
 .menu.open{display:block}
-.menu a{display:flex;align-items:center;min-height:52px;padding:0 1.25rem;font-family:var(--display);font-weight:500;font-size:1.1rem;
-  text-decoration:none;color:#fff;border-top:1px solid rgba(255,255,255,.1)}
-.menu a:active{background:rgba(255,255,255,.1)}
+.menu a{display:flex;align-items:center;min-height:52px;padding:0 1.25rem;font-family:var(--display);font-weight:700;font-size:1.1rem;
+  text-decoration:none;color:#fff;border-top:1px solid rgba(255,255,255,.12)}
+.menu a:first-child{border-top:0}
+.menu a:active{background:rgba(255,255,255,.12)}
 
 /* ============ BANNER DO TOPO ============ */
 .banner-topo{position:relative;background:var(--violet-deep)}
@@ -247,6 +250,65 @@ textarea:focus{outline:3px solid var(--pink);outline-offset:2px;border-color:var
 .cta p{color:#eadff9;margin-bottom:1.75rem}
 
 footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(safe-area-inset-bottom));font-family:var(--display);font-size:.95rem}
+
+/* ============ RESPONSIVO PARA TABLET/PC ============ */
+@media (min-width:900px){
+  :root{--header-h:68px}
+  .page{max-width:1180px;box-shadow:0 0 60px rgba(0,0,0,.25)}
+  .container{padding:0 3rem}
+  .block{padding:5rem 0}
+  .refs{max-width:1180px;padding:0 3rem 1.5rem}
+
+  /* cabeçalho e menu */
+  .bar{padding:0 .5rem}
+  .brand{font-size:1.3rem}
+  .menu-btn{font-size:1.1rem;padding:.55rem 1.15rem}
+  .menu{left:auto;right:0;width:300px;top:calc(100% + 10px)}
+  .menu a{padding:0 1.5rem}
+
+  .banner-title-row{padding:2.5rem 3rem 3.75rem}
+  .banner-title{font-size:clamp(3rem,5vw,4.4rem)}
+
+  /* capa (proposta) lado a lado com a foto */
+  .hero .container{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
+  .hero .container>*{grid-column:1}
+  .hero .container>.photo-wrap{grid-column:2;grid-row:1/-1;margin:0}
+  .hero .btn-stack{flex-direction:row;flex-wrap:wrap;margin-bottom:0}
+  .hero .btn-stack .btn{width:auto;flex:0 1 auto;padding-left:1.75rem;padding-right:1.75rem}
+
+  /* texto + foto (por que o tema importa) */
+  .story{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+  .story>*{grid-column:1}
+  .story>.photo-wrap{grid-column:2;grid-row:1/-1;margin-top:0}
+
+  /* dados */
+  .stats-grid{grid-template-columns:repeat(4,1fr)}
+
+  /* ações da proposta lado a lado */
+  .actions{flex-direction:row;flex-wrap:wrap}
+  .action{flex:1 1 300px}
+
+  /* pioneiras: foto ao lado do texto */
+  .tabs .segment{max-width:460px}
+  .profile{display:grid;grid-template-columns:260px 1fr;gap:0 2.75rem;align-items:start}
+  .profile>*{grid-column:2}
+  .profile>.photo-wrap{grid-column:1;grid-row:1/-1;margin:0}
+  .profile h3{margin-top:0}
+
+  /* galeria com mais colunas */
+  .gallery{grid-template-columns:repeat(4,1fr)}
+  .gallery .g1{grid-column:span 2}
+
+  /* descubra sua engenharia: barra de ação não gruda tanto na borda */
+  .finder-bar{margin-left:0;margin-right:0;border-radius:14px 14px 0 0}
+
+  /* chamada final centralizada */
+  .cta .container{max-width:640px;text-align:left}
+}
+
+@media (min-width:1300px){
+  .page{max-width:1320px}
+}
 </style>
 </head>
 <body>
