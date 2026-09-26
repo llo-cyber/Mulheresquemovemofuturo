@@ -15,16 +15,16 @@ const CONFIG = {
   linkQuiz: "https://seu-link-do-quiz-aqui.com",
   fotos: {
     banner:      { src: "capa.png",                    alt: "Mulher olhando para o lado" },
-    sticker:     { src: "fotos/sticker.png",           alt: "Selo ou figura do projeto (PNG transparente)" },
+    sticker:     { src: "sticker.jpg",           alt: "Selo ou figura do projeto (PNG transparente)" },
     hero:        { src: "fotos/hero.jpg",              alt: "Descreva a foto da capa" },
     contexto:    { src: "fotos/contexto.jpg",          alt: "Descreva a foto desta seção" },
-    acao1:       { src: "fotos/acao-mentoria.jpg",     alt: "Mentoria nas escolas" },
+    acao1:       { src: "nasescolas.jpg",     alt: "Mentoria nas escolas" },
     acao2:       { src: "igualdade.jpg",  alt: "Combate ao preconceito de gênero" },
     acao3:       { src: "fotos/acao-mercado.jpg",      alt: "Equidade no mercado de trabalho" },
     ada:         { src: "ada-lovelace.jpg",      alt: "Retrato de Ada Lovelace" },
     mary:        { src: "maryjackson.jpg",       alt: "Retrato de Mary Jackson" },
     elsie:       { src: "elsie.jpg",     alt: "Retrato de Elsie" },
-    mulhermec:   { src: "mulhermec.jpg",         alt: "Foto da galeria do projeto" },
+    galeria1:   { src: "fotos/galeria-1.jpg",         alt: "Foto da galeria do projeto" },
     galeria2:    { src: "fotos/galeria-2.jpg",         alt: "Foto da galeria do projeto" },
     galeria3:    { src: "fotos/galeria-3.jpg",         alt: "Foto da galeria do projeto" },
     galeria4:    { src: "fotos/galeria-4.jpg",         alt: "Foto da galeria do projeto" },
@@ -84,7 +84,7 @@ button,input,textarea,summary{touch-action:manipulation}
 .btn-outline-dark{border-color:var(--ink);color:var(--ink);background:transparent}
 .btn-stack{display:flex;flex-direction:column;gap:.85rem}
 
-/* ============ FOTOS (só imagem, jeito de foto colada no caderno) ============ */
+/* ============ FOTOS ============ */
 .photo{position:relative;margin:0;width:100%;aspect-ratio:var(--ratio,4/3)}
 .photo.r-portrait{--ratio:4/5}
 .photo.r-wide{--ratio:4/3}
@@ -398,24 +398,25 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
 <section id="acao" class="block">
   <div class="container">
     <div class="section-head">
-      <h2>Como vamos agir</h2>
+      <h2>Como mudar esses números?</h2>
       <p>[Resuma em uma ou duas frases o plano da sua proposta.]</p>
     </div>
     <div class="actions">
       <article class="action">
         <div class="photo-wrap tilt-l"><figure class="photo r-wide"><img data-foto="acao1" src="" alt="Mentoria nas escolas"></figure></div>
         <h3>Mentoria nas escolas</h3>
-        <p>[Descreva esta ação em duas ou três linhas.]</p>
+        <p>[Em ambientes de ensino técnico, como o IFBA, mentorias com professoras, engenheiras ou profissionais da área de STEM podem ajudar as alunas a conhecer diferentes áreas, tirar dúvidas e ter contato com referências femininas, contribuindo para o problema da falta de representatividade.]</p>
       </article>
       <article class="action">
         <div class="photo-wrap tilt-r"><figure class="photo r-wide"><img data-foto="acao2" src="" alt="Combate ao preconceito de gênero"></figure></div>
         <h3>Combate ao preconceito de gênero</h3>
-        <p>[Descreva esta ação em duas ou três linhas.]</p>
+        <p>[Promover ações de conscientização nas escolas e nos ambientes profissionais para combater estereótipos e preconceitos, mostrando que a engenharia não é uma profissão determinada pelo gênero.]</p>
       </article>
       <article class="action">
         <div class="photo-wrap tilt-l"><figure class="photo r-wide"><img data-foto="acao3" src="" alt="Equidade no mercado de trabalho"></figure></div>
         <h3>Equidade no mercado de trabalho</h3>
-        <p>[Descreva esta ação em duas ou três linhas.]</p>
+        <p>[
+Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos, salários e possibilidades de crescimento profissional, contribuindo para reduzir desigualdades presentes no ambiente de trabalho.]</p>
       </article>
     </div>
   </div>
