@@ -54,7 +54,7 @@ const CONFIG = {
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 [hidden]{display:none!important}
-html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 12px);-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + env(safe-area-inset-top) + 12px);-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 body{font-family:var(--body);font-size:1.0625rem;line-height:1.65;color:var(--ink);background:var(--ink)}
 h1,h2,h3,h4{font-family:var(--display);line-height:1.1;letter-spacing:-.015em}
@@ -98,20 +98,26 @@ button,input,textarea,summary{touch-action:manipulation}
   background:var(--tape);opacity:.85;box-shadow:0 1px 2px rgba(0,0,0,.15);z-index:2}
 
 /* ============ CABEÇALHO E MENU ============ */
-.site-header{position:sticky;top:0;z-index:50;height:var(--header-h);background:var(--ink);color:#fff;
+.site-header{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;
   border-bottom:3px solid var(--pink);padding-top:env(safe-area-inset-top)}
 .bar{height:var(--header-h);display:flex;align-items:center;justify-content:space-between;background:transparent}
 .brand{font-family:var(--display);font-weight:800;font-size:1.1rem;text-decoration:none;color:#fff;letter-spacing:-.01em}
-.menu-btn{display:flex;align-items:center;gap:.55rem;min-height:44px;padding:0 .25rem 0 .75rem;background:none;border:0;color:#fff;
-  font-family:var(--display);font-weight:800;font-size:1.05rem;cursor:pointer}
-.menu-btn .lines{display:flex;flex-direction:column;gap:5px}
-.menu-btn .lines i{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
-.menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--violet-deep);
-  border-bottom:1px solid rgba(255,255,255,.14);box-shadow:0 12px 24px rgba(0,0,0,.25)}
+.menu-btn{display:flex;align-items:center;justify-content:center;width:48px;height:48px;flex:0 0 auto;
+  background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.45);border-radius:10px;color:#fff;cursor:pointer}
+.menu-btn:active{background:rgba(255,255,255,.26)}
+.menu-btn .lines{display:flex;flex-direction:column;gap:6px}
+.menu-btn .lines i{display:block;width:24px;height:3px;background:#fff;border-radius:2px}
+.menu-btn[aria-expanded="true"] .lines{gap:0}
+.menu-btn[aria-expanded="true"] .lines i:nth-child(1){transform:translateY(3px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] .lines i:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] .lines i:nth-child(3){transform:translateY(-3px) rotate(-45deg)}
+.menu{display:none;position:absolute;top:calc(100% + 8px);left:1rem;right:1rem;background:var(--violet-deep);
+  border:1px solid rgba(255,255,255,.16);border-radius:14px;box-shadow:0 16px 32px rgba(0,0,0,.32);overflow:hidden}
 .menu.open{display:block}
-.menu a{display:flex;align-items:center;min-height:52px;padding:0 1.25rem;font-family:var(--display);font-weight:500;font-size:1.1rem;
-  text-decoration:none;color:#fff;border-top:1px solid rgba(255,255,255,.1)}
-.menu a:active{background:rgba(255,255,255,.1)}
+.menu a{display:flex;align-items:center;min-height:52px;padding:0 1.25rem;font-family:var(--display);font-weight:700;font-size:1.1rem;
+  text-decoration:none;color:#fff;border-top:1px solid rgba(255,255,255,.12)}
+.menu a:first-child{border-top:0}
+.menu a:active{background:rgba(255,255,255,.12)}
 
 /* ============ BANNER DO TOPO ============ */
 .banner-topo{position:relative;background:var(--violet-deep)}
@@ -247,6 +253,65 @@ textarea:focus{outline:3px solid var(--pink);outline-offset:2px;border-color:var
 .cta p{color:#eadff9;margin-bottom:1.75rem}
 
 footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(safe-area-inset-bottom));font-family:var(--display);font-size:.95rem}
+
+/* ============ RESPONSIVO PARA TABLET/PC ============ */
+@media (min-width:900px){
+  :root{--header-h:68px}
+  .page{max-width:1180px;box-shadow:0 0 60px rgba(0,0,0,.25)}
+  .container{padding:0 3rem}
+  .block{padding:5rem 0}
+  .refs{max-width:1180px;padding:0 3rem 1.5rem}
+
+  /* cabeçalho e menu */
+  .bar{padding:0 .5rem}
+  .brand{font-size:1.3rem}
+  .menu-btn{width:52px;height:52px}
+  .menu{left:auto;right:0;width:300px;top:calc(100% + 10px)}
+  .menu a{padding:0 1.5rem; font_size: 2rem}
+
+  .banner-title-row{padding:2.5rem 3rem 3.75rem}
+  .banner-title{font-size:clamp(3rem,5vw,4.4rem)}
+
+  /* capa (proposta) lado a lado com a foto */
+  .hero .container{display:flex;align-items:center;gap:3rem}
+  .hero .hero-text{flex:1.15}
+  .hero .photo-wrap{flex:.85;margin:0}
+  .hero .btn-stack{flex-direction:row;flex-wrap:wrap;margin-bottom:0}
+  .hero .btn-stack .btn{width:auto;flex:0 1 auto;padding-left:1.75rem;padding-right:1.75rem}
+
+  /* texto + foto (por que o tema importa) */
+  .story{display:flex;align-items:center;gap:3rem}
+  .story-text{flex:1.1}
+  .story .photo-wrap{flex:.9;margin-top:0}
+
+  /* dados */
+  .stats-grid{grid-template-columns:repeat(4,1fr)}
+
+  /* ações da proposta lado a lado */
+  .actions{flex-direction:row;flex-wrap:wrap}
+  .action{flex:1 1 300px}
+
+  /* pioneiras: foto ao lado do texto */
+  .tabs .segment{max-width:460px}
+  .profile{display:flex;align-items:flex-start;gap:2.75rem}
+  .profile .photo-wrap{flex:0 0 260px;margin:0}
+  .profile-text{flex:1}
+  .profile h3{margin-top:0}
+
+  /* galeria com mais colunas */
+  .gallery{grid-template-columns:repeat(4,1fr)}
+  .gallery .g1{grid-column:span 2}
+
+  /* descubra sua engenharia: barra de ação não gruda tanto na borda */
+  .finder-bar{margin-left:0;margin-right:0;border-radius:14px 14px 0 0}
+
+  /* chamada final centralizada */
+  .cta .container{max-width:640px;text-align:left}
+}
+
+@media (min-width:1300px){
+  .page{max-width:1320px}
+}
 </style>
 </head>
 <body>
@@ -265,8 +330,8 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
 <header class="site-header" id="cabecalho">
   <div class="container bar">
     <a class="brand" href="#proposta">Mulheres na Engenharia</a>
-    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
-      Menu <span class="lines" aria-hidden="true"><i></i><i></i><i></i></span>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <span class="lines" aria-hidden="true"><i></i><i></i><i></i></span>
     </button>
   </div>
   <nav class="menu" id="menu" aria-label="Menu principal">
@@ -285,14 +350,16 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
 <!-- ============ 1. CAPA: PROPOSTA DE INTERVENÇÃO ============ -->
 <section id="proposta" class="hero">
   <div class="container">
-    <span class="eyebrow">nosso projeto</span>
-    <h2 class="hero-title">Proposta de intervenção</h2>
-    <p>
-      [ESCREVA A SUA PROPOSTA AQUI]: Nosso objetivo é incentivar e expandir a presença feminina nas áreas STEM (Ciência, Tecnologia, Engenharia e Matemática), promovendo mentoria nas escolas, combate ao preconceito de gênero e garantindo equidade no mercado de trabalho.
-    </p>
-    <div class="btn-stack">
-      <a class="btn btn-pink" href="#" data-quiz target="_blank" rel="noopener">Responder o quiz do projeto</a>
-      <a class="btn btn-outline-light" href="#descubra">Descubra sua engenharia</a>
+    <div class="hero-text">
+      <span class="eyebrow">nosso projeto</span>
+      <h2 class="hero-title">Proposta de intervenção</h2>
+      <p>
+        [ESCREVA A SUA PROPOSTA AQUI]: Nosso objetivo é incentivar e expandir a presença feminina nas áreas STEM (Ciência, Tecnologia, Engenharia e Matemática), promovendo mentoria nas escolas, combate ao preconceito de gênero e garantindo equidade no mercado de trabalho.
+      </p>
+      <div class="btn-stack">
+        <a class="btn btn-pink" href="#" data-quiz target="_blank" rel="noopener">Responder o quiz do projeto</a>
+        <a class="btn btn-outline-light" href="#descubra">Descubra sua engenharia</a>
+      </div>
     </div>
     <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="hero" src="" alt="Descreva a foto da capa"></figure></div>
   </div>
@@ -301,9 +368,11 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
 <!-- ============ 2. TEXTO + FOTO: O PROBLEMA ============ -->
 <section id="contexto" class="block">
   <div class="container story">
-    <h2>Por que esse tema importa</h2>
-    <p>[Escreva aqui o problema que o projeto quer resolver: por que ainda há poucas mulheres na engenharia?]</p>
-    <p>[Adicione dados, exemplos ou uma história real para dar contexto ao leitor.]</p>
+    <div class="story-text">
+      <h2>Por que esse tema importa</h2>
+      <p>[Escreva aqui o problema que o projeto quer resolver: por que ainda há poucas mulheres na engenharia?]</p>
+      <p>[Adicione dados, exemplos ou uma história real para dar contexto ao leitor.]</p>
+    </div>
     <div class="photo-wrap"><figure class="photo r-wide"><img data-foto="contexto" src="" alt="Descreva a foto desta seção"></figure></div>
   </div>
 </section>
@@ -372,12 +441,14 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
       <div id="mulher1" class="tab-panel active" role="tabpanel">
         <div class="profile">
           <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="ada" src="" alt="Retrato de Ada Lovelace"></figure></div>
-          <h3>Ada Lovelace</h3>
-          <p class="field">Engenharia de Software e Matemática</p>
-          <p>Ada Lovelace é reconhecida mundialmente como a primeira programadora da história. Ela escreveu o primeiro algoritmo para ser processado por uma máquina (a Máquina Analítica de Charles Babbage).</p>
-          <div class="contrib">
-            <h4>Contribuição principal</h4>
-            <p>Criação do primeiro algoritmo para computadores e a visão de que máquinas poderiam ir além de meros cálculos numéricos.</p>
+          <div class="profile-text">
+            <h3>Ada Lovelace</h3>
+            <p class="field">Engenharia de Software e Matemática</p>
+            <p>Ada Lovelace é reconhecida mundialmente como a primeira programadora da história. Ela escreveu o primeiro algoritmo para ser processado por uma máquina (a Máquina Analítica de Charles Babbage).</p>
+            <div class="contrib">
+              <h4>Contribuição principal</h4>
+              <p>Criação do primeiro algoritmo para computadores e a visão de que máquinas poderiam ir além de meros cálculos numéricos.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -385,12 +456,14 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
       <div id="mulher2" class="tab-panel" role="tabpanel">
         <div class="profile">
           <div class="photo-wrap tilt-r"><figure class="photo r-portrait"><img data-foto="mary" src="" alt="Retrato de Mary Jackson"></figure></div>
-          <h3>Mary Jackson</h3>
-          <p class="field">Matemática e engenheira aeroespacial</p>
-          <p>Mary Winston Jackson foi uma matemática e engenheira aeroespacial norte-americana que fez história ao se tornar a primeira engenheira negra da NASA em 1958.</p>
-          <div class="contrib">
-            <h4>Contribuição principal</h4>
-            <p>Enquanto a sua mente ajudou a colocar aeronaves no espaço em velocidades supersônicas, o seu legado social garantiu que as próximas gerações de mulheres e negros não precisassem ir à justiça para estudar engenharia.</p>
+          <div class="profile-text">
+            <h3>Mary Jackson</h3>
+            <p class="field">Matemática e engenheira aeroespacial</p>
+            <p>Mary Winston Jackson foi uma matemática e engenheira aeroespacial norte-americana que fez história ao se tornar a primeira engenheira negra da NASA em 1958.</p>
+            <div class="contrib">
+              <h4>Contribuição principal</h4>
+              <p>Enquanto a sua mente ajudou a colocar aeronaves no espaço em velocidades supersônicas, o seu legado social garantiu que as próximas gerações de mulheres e negros não precisassem ir à justiça para estudar engenharia.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -398,12 +471,14 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
       <div id="mulher3" class="tab-panel" role="tabpanel">
         <div class="profile">
           <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="elsie" src="" alt="Retrato de Elsie"></figure></div>
-          <h3>Elsie</h3>
-          <p class="field">Engenharia Aeronáutica</p>
-          <p>Elizabeth Muriel Gregory "Elsie" MacGill foi uma pioneira canadense reconhecida mundialmente como a primeira engenheira aeronáutica do mundo e a primeira mulher a projetar uma aeronave comercial. Conhecida pelo apelido de "Queen of the Hurricanes"</p>
-          <div class="contrib">
-            <h4>Contribuição principal</h4>
-            <p>Reestruturação industrial e na liderança da produção em massa do caça Hawker Hurricane, além do desenvolvimento pioneiro de adaptações para voos em climas severos (invernal) durante a Segunda Guerra Mundial.</p>
+          <div class="profile-text">
+            <h3>Elsie</h3>
+            <p class="field">Engenharia Aeronáutica</p>
+            <p>Elizabeth Muriel Gregory "Elsie" MacGill foi uma pioneira canadense reconhecida mundialmente como a primeira engenheira aeronáutica do mundo e a primeira mulher a projetar uma aeronave comercial. Conhecida pelo apelido de "Queen of the Hurricanes"</p>
+            <div class="contrib">
+              <h4>Contribuição principal</h4>
+              <p>Reestruturação industrial e na liderança da produção em massa do caça Hawker Hurricane, além do desenvolvimento pioneiro de adaptações para voos em climas severos (invernal) durante a Segunda Guerra Mundial.</p>
+            </div>
           </div>
         </div>
       </div>
