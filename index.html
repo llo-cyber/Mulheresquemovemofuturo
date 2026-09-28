@@ -35,23 +35,39 @@ const CONFIG = {
 
 <style>
 :root{
-  --ink:#1d0f38;
-  --violet-deep:#2b1258;
-  --violet:#6b21a8;
-  --pink:#f72585;
-  --pink-dark:#b80c61;
+  --ink:#362C75;          /* Midnight Blue: textos, cabeçalho, rodapé */
+  --violet-deep:#375299;  /* Dusk Blue: banner, capa, menu */
+  --violet:#695D9E;       /* Dusty Grape: destaques e chamada final */
+  --pink:#F2E5BD;         /* Pearl Beige: botão principal e detalhes */
+  --pink-dark:#375299;
   --paper:#ffffff;
-  --lav:#f5f0fb;
-  --lav-2:#ebe2f7;
-  --line:#d8cbee;
-  --muted:#5f5878;
-  --tape:#fff1b8;
-  --header-h:56px;
-
-  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
-  --body:'Source Serif 4',Georgia,'Times New Roman',serif;
-  --hand:'Caveat',cursive;
+  --lav:#F2E5BD;          /* fundo das seções alternadas */
+  --lav-2:#d3d3de;
+  --line:#999AAE;         /* Lavender Grey */
+  --muted:#4b4680;
+  --tape:#999AAE;
+  --dusk:#375299;
+  --beige:#F2E5BD;
 }
+
+:focus-visible{outline-color:var(--dusk)}
+
+.hero .eyebrow{color:var(--beige)}
+.hero p,.cta p{color:var(--beige)}
+footer{color:var(--beige)}
+
+.stat{box-shadow:4px 4px 0 var(--dusk)}
+.tab-btn.active{box-shadow:inset 0 -3px 0 var(--dusk),0 1px 3px rgba(54,44,117,.18)}
+.badge-em-breve{background:var(--ink);color:var(--beige)}
+.contrib{background:#fff}
+
+.timeline li::before{background:var(--dusk);border-color:#fff}
+.timeline strong{background:linear-gradient(transparent 62%,var(--beige) 62%)}
+
+.bar i{background:var(--dusk)}
+.result.first .bar i{background:var(--beige)}
+.result:not(.first) .rank{color:var(--dusk)}
+.result:not(.first) .mulher-destaque{background:#fff}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + env(safe-area-inset-top) + 12px);-webkit-text-size-adjust:100%}
