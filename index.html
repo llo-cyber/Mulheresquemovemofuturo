@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#2b1258">
+<meta name="theme-color" content="#3E2723">
 <title>Mulheres que Movem o Futuro</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Caveat:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600;1,9..144,800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <script>
 const CONFIG = {
@@ -16,11 +16,11 @@ const CONFIG = {
   fotos: {
     banner:      { src: "capa.png",                    alt: "Mulher olhando para o lado" },
     sticker:     { src: "sticker.jpg",           alt: "Selo ou figura do projeto (PNG transparente)" },
-    hero:        { src: "fotos/hero.jpg",              alt: "Descreva a foto da capa" },
+    hero:        { src: "caveira.jpg",              alt: "engenhariabiomédica" },
     contexto:    { src: "fotos/contexto.jpg",          alt: "Descreva a foto desta seção" },
     acao1:       { src: "nasescolas.jpg",     alt: "Mentoria nas escolas" },
     acao2:       { src: "igualdade.jpg",  alt: "Combate ao preconceito de gênero" },
-    acao3:       { src: "fotos/acao-mercado.jpg",      alt: "Equidade no mercado de trabalho" },
+    acao3:       { src: "mulhermec.jpg",      alt: "Equidade no mercado de trabalho" },
     ada:         { src: "ada-lovelace.jpg",      alt: "Retrato de Ada Lovelace" },
     mary:        { src: "maryjackson.jpg",       alt: "Retrato de Mary Jackson" },
     elsie:       { src: "elsie.jpg",     alt: "Retrato de Elsie" },
@@ -34,40 +34,29 @@ const CONFIG = {
 </script>
 
 <style>
+/* Paleta: Dark Chocolate, Aloewood, Milk Tea, Sakura, Misty Rose,
+   Deep Espresso, Petal Reverie, Ivory Hearth */
 :root{
-  --ink:#362C75;          /* Midnight Blue: textos, cabeçalho, rodapé */
-  --violet-deep:#375299;  /* Dusk Blue: banner, capa, menu */
-  --violet:#695D9E;       /* Dusty Grape: destaques e chamada final */
-  --pink:#F2E5BD;         /* Pearl Beige: botão principal e detalhes */
-  --pink-dark:#375299;
-  --paper:#ffffff;
-  --lav:#F2E5BD;          /* fundo das seções alternadas */
-  --lav-2:#d3d3de;
-  --line:#999AAE;         /* Lavender Grey */
-  --muted:#4b4680;
-  --tape:#999AAE;
-  --dusk:#375299;
-  --beige:#F2E5BD;
+  --header-h:64px;
+  --ink:#3E2723;          /* Deep Espresso: textos, cabeçalho, rodapé */
+  --violet-deep:#443025;  /* Dark Chocolate: banner, capa, menu */
+  --violet:#7F5836;       /* Aloewood: destaques e chamada final */
+  --pink:#EC9C9D;         /* Sakura: botões e detalhes */
+  --pink-dark:#9A4A55;    /* rosa escuro (só para textos de aviso) */
+  --paper:#F5F0E6;        /* Ivory Hearth: fundo da página */
+  --lav:#F8E3E8;          /* Petal Reverie clarinho: seções alternadas */
+  --lav-2:#EBD3CC;
+  --line:#D8B9AB;
+  --muted:#6B4E3F;
+  --tape:#F4C9D6;         /* Petal Reverie */
+  --dusk:#AA7F66;         /* Milk Tea */
+  --beige:#F5F0E6;
+  --display:"Nunito",system-ui,sans-serif;
+  --body:"Nunito",system-ui,sans-serif;
+  --hand:"Fraunces",Georgia,serif;
+  --serif:"Fraunces",Georgia,serif;
 }
 
-:focus-visible{outline-color:var(--dusk)}
-
-.hero .eyebrow{color:var(--beige)}
-.hero p,.cta p{color:var(--beige)}
-footer{color:var(--beige)}
-
-.stat{box-shadow:4px 4px 0 var(--dusk)}
-.tab-btn.active{box-shadow:inset 0 -3px 0 var(--dusk),0 1px 3px rgba(54,44,117,.18)}
-.badge-em-breve{background:var(--ink);color:var(--beige)}
-.contrib{background:#fff}
-
-.timeline li::before{background:var(--dusk);border-color:#fff}
-.timeline strong{background:linear-gradient(transparent 62%,var(--beige) 62%)}
-
-.bar i{background:var(--dusk)}
-.result.first .bar i{background:var(--beige)}
-.result:not(.first) .rank{color:var(--dusk)}
-.result:not(.first) .mulher-destaque{background:#fff}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + env(safe-area-inset-top) + 12px);-webkit-text-size-adjust:100%}
@@ -328,12 +317,89 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
 @media (min-width:1300px){
   .page{max-width:1320px}
 }
+
+/* =========================================================
+   ESTILO (cores, fontes, cantos, sombras)
+   ========================================================= */
+h1,h2,h3,h4,.brand,.stat-num{font-family:var(--serif);letter-spacing:-.01em}
+h2,h3{font-weight:800}
+.banner-title{font-family:var(--serif);font-style:italic;font-weight:800;font-size:clamp(2.3rem,10.5vw,3.1rem);
+  line-height:1.02;text-shadow:0 2px 0 rgba(0,0,0,.2);color:var(--paper)}
+@media (min-width:900px){.banner-title{font-size:clamp(3rem,5vw,4.4rem)}}
+.eyebrow,.year,.rank,.mulher-nome,.badge-em-breve,.grupo-titulo{font-family:var(--serif);font-style:italic;font-weight:600}
+.year{font-size:1.7rem}
+.hero h2.hero-title{font-weight:800}
+.btn,.menu a,.tab-btn,.chip span,.more summary{font-family:var(--display)}
+.btn{font-weight:800}
+
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
+.chip input:focus-visible+span{outline:3px solid var(--violet)}
+textarea:focus{outline:3px solid var(--pink);border-color:var(--violet)}
+
+.section-head .underline{display:none}
+.section-head h2{color:var(--ink)}
+.section-head p,.action p,.stat-label,.stats-note{color:var(--muted)}
+
+.btn{border-radius:999px}
+.btn-pink{background:var(--pink);color:var(--ink);box-shadow:0 4px 0 var(--dusk)}
+.btn-outline-light{border-color:var(--pink);color:var(--paper)}
+.btn-dark{background:var(--ink);color:var(--paper);box-shadow:0 4px 0 var(--pink)}
+.btn-outline-dark{border-color:var(--ink);color:var(--ink)}
+
+.photo img{border:6px solid var(--paper);border-radius:18px;background:var(--lav-2);box-shadow:0 6px 16px rgba(62,39,35,.22)}
+.sticker-frame img{border-radius:0}
+
+.brand{color:var(--paper);font-weight:800}
+.menu-btn{background:rgba(245,240,230,.14);border-color:var(--pink)}
+.menu-btn .lines i{background:var(--paper)}
+.menu{border-color:rgba(244,201,214,.3);border-radius:18px}
+.menu a{color:var(--paper);border-top-color:rgba(244,201,214,.18);font-weight:700}
+.menu a:active{background:rgba(236,156,157,.25)}
+
+.hero{background-image:radial-gradient(circle at 92% 8%,rgba(236,156,157,.28),transparent 45%),
+                       radial-gradient(circle at 5% 95%,rgba(244,201,214,.14),transparent 40%);
+  color:var(--paper)}
+.hero .eyebrow{color:var(--pink);font-size:1.4rem}
+.hero p,.cta p{color:#F4E2DC}
+
+.stat{border-radius:20px}
+.stat-num{color:var(--violet);font-weight:800}
+
+.segment{border-radius:999px}
+.tab-btn{border-radius:999px;font-weight:800}
+.tab-btn.active{background:var(--pink);color:var(--ink);box-shadow:0 2px 6px rgba(62,39,35,.2)}
+.badge-em-breve{background:var(--tape);color:var(--ink);font-size:1.05rem}
+.profile .field{font-weight:700}
+.contrib{background:#fff;border-left:5px solid var(--pink);border-radius:14px}
+
+.timeline{border-left:3px dashed var(--pink)}
+.timeline li::before{background:var(--pink);border:3px solid var(--paper)}
+.timeline strong{background:linear-gradient(transparent 60%,rgba(236,156,157,.55) 60%)}
+
+.grupo-titulo{font-size:1.3rem}
+.chip span{color:var(--ink);font-weight:600}
+.chip input:checked+span{background:var(--pink);border-color:var(--pink);color:var(--ink);font-weight:800}
+.more summary{border-radius:16px}
+textarea{border-radius:16px}
+.finder-bar{background:rgba(248,227,232,.96);box-shadow:0 -8px 20px rgba(62,39,35,.1)}
+.aviso{font-weight:700}
+
+.result{border-top:2px solid var(--pink)}
+.result.first{color:var(--paper);border-radius:20px}
+.bar i,.result.first .bar i{background:var(--pink)}
+.result.first .bar{background:rgba(245,240,230,.2)}
+.mulher-destaque{border-radius:14px}
+.result:not(.first) .mulher-destaque{background:#fff}
+.result:not(.first) .rank{color:var(--violet)}
+
+.cta h2{color:var(--paper)}
+footer{color:#F4E2DC}
 </style>
 </head>
 <body>
 <div class="page">
 
-<!-- ============ BANNER DO TOPO (aceita GIF) ============ -->
+<!-- ============ BANNER DO TOPO ============ -->
 <section class="banner-topo">
   <img class="banner-img" data-foto="banner" src="" alt="Banner do projeto (pode ser um GIF)">
   <div class="banner-title-row">
@@ -370,8 +436,7 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
       <span class="eyebrow">nosso projeto</span>
       <h2 class="hero-title">Proposta de intervenção</h2>
       <p>
-        [ESCREVA A SUA PROPOSTA AQUI]: Nosso objetivo é incentivar e expandir a presença feminina nas áreas STEM (Ciência, Tecnologia, Engenharia e Matemática), promovendo mentoria nas escolas, combate ao preconceito de gênero e garantindo equidade no mercado de trabalho.
-      </p>
+         O objetivo do nosso projeto é incentivar e aproximar meninas e mulheres para as diversas áreas da engenharia. Acreditamos que, trazendo as histórias de mulheres fortes que foram importantes para a engenharia, conseguimos combater as desigualdades de gênero e os diversos estereótipos que infelizmente ainda existem na STEM.      </p>
       <div class="btn-stack">
         <a class="btn btn-pink" href="#" data-quiz target="_blank" rel="noopener">Responder o quiz do projeto</a>
         <a class="btn btn-outline-light" href="#descubra">Descubra sua engenharia</a>
@@ -386,8 +451,8 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
   <div class="container story">
     <div class="story-text">
       <h2>Por que esse tema importa</h2>
-      <p>[Escreva aqui o problema que o projeto quer resolver: por que ainda há poucas mulheres na engenharia?]</p>
-      <p>[Adicione dados, exemplos ou uma história real para dar contexto ao leitor.]</p>
+      <p>Muitas meninas crescem sem ver mulheres engenheiras por perto. Sem essas referências, a engenharia acaba parecendo "coisa de menino", e elas desistem antes mesmo de tentar.</p>
+      <p>Isso tem custo para todo mundo: menos mulheres na área significa menos ideias, menos talentos e soluções que não pensam em metade da população. Ada, Mary e Elsie mostram que a capacidade nunca foi o problema.</p>
     </div>
     <div class="photo-wrap"><figure class="photo r-wide"><img data-foto="contexto" src="" alt="Descreva a foto desta seção"></figure></div>
   </div>
@@ -398,7 +463,7 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
   <div class="container">
     <div class="section-head">
       <h2>Os números da desigualdade</h2>
-      <p>[Se quiser, adicione a fonte dos dados abaixo, como CONFEA ou INEP.]</p>
+      <p>blablabla</p>
     </div>
     <div class="stats-grid">
       <div class="stat"><span class="stat-num">[24%]</span><span class="stat-label">[das engenheiras registradas no Brasil são mulheres]</span></div>
@@ -421,18 +486,18 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
       <article class="action">
         <div class="photo-wrap tilt-l"><figure class="photo r-wide"><img data-foto="acao1" src="" alt="Mentoria nas escolas"></figure></div>
         <h3>Mentoria nas escolas</h3>
-        <p>[Em ambientes de ensino técnico, como o IFBA, mentorias com professoras, engenheiras ou profissionais da área de STEM podem ajudar as alunas a conhecer diferentes áreas, tirar dúvidas e ter contato com referências femininas, contribuindo para o problema da falta de representatividade.]</p>
+        <p>Em ambientes de ensino técnico, como o IFBA, mentorias com professoras, engenheiras ou profissionais da área de STEM podem ajudar as alunas a conhecer diferentes áreas, tirar dúvidas e ter contato com referências femininas, contribuindo para o problema da falta de representatividade.</p>
       </article>
       <article class="action">
         <div class="photo-wrap tilt-r"><figure class="photo r-wide"><img data-foto="acao2" src="" alt="Combate ao preconceito de gênero"></figure></div>
         <h3>Combate ao preconceito de gênero</h3>
-        <p>[Promover ações de conscientização nas escolas e nos ambientes profissionais para combater estereótipos e preconceitos, mostrando que a engenharia não é uma profissão determinada pelo gênero.]</p>
+        <p>Promover ações de conscientização nas escolas e nos ambientes profissionais para combater estereótipos e preconceitos, mostrando que a engenharia não é uma profissão determinada pelo gênero.</p>
       </article>
       <article class="action">
         <div class="photo-wrap tilt-l"><figure class="photo r-wide"><img data-foto="acao3" src="" alt="Equidade no mercado de trabalho"></figure></div>
         <h3>Equidade no mercado de trabalho</h3>
-        <p>[
-Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos, salários e possibilidades de crescimento profissional, contribuindo para reduzir desigualdades presentes no ambiente de trabalho.]</p>
+        <p>
+Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos, salários e possibilidades de crescimento profissional, contribuindo para reduzir desigualdades presentes no ambiente de trabalho.</p>
       </article>
     </div>
   </div>
@@ -611,8 +676,8 @@ document.querySelectorAll('[data-quiz]').forEach(a => { a.href = CONFIG.linkQuiz
 
 /* ---------- Placeholder genérico (só imagem, sem texto) ---------- */
 const PLACEHOLDER = "data:image/svg+xml;utf8," + encodeURIComponent(
-  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect width="400" height="400" fill="#ebe2f7"/>' +
-  '<circle cx="200" cy="150" r="46" fill="#cbb9e8"/><rect x="90" y="230" width="220" height="110" rx="14" fill="#cbb9e8"/></svg>'
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect width="400" height="400" fill="#F8E3E8"/>' +
+  '<circle cx="200" cy="150" r="46" fill="#EBD3CC"/><rect x="90" y="230" width="220" height="110" rx="14" fill="#EBD3CC"/></svg>'
 );
 document.querySelectorAll('img[data-foto]').forEach(img => {
   img.src = PLACEHOLDER;
@@ -945,4 +1010,3 @@ resultadoEl.addEventListener('click', e => {
 </script>
 </body>
 </html>
-
