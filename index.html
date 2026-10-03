@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#3E2723">
 <title>Mulheres que Movem o Futuro</title>
+<meta name="description" content="Projeto que aproxima meninas e mulheres das diversas áreas da engenharia, contando histórias de pioneiras.">
+<meta property="og:title" content="Mulheres que Movem o Futuro">
+<meta property="og:description" content="Conheça pioneiras da engenharia e descubra qual engenharia combina com você.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,15 +18,15 @@ const CONFIG = {
   linkQuiz: "https://seu-link-do-quiz-aqui.com",
   fotos: {
     banner:      { src: "capanova.png",                    alt: "Mulher olhando para o lado" },
-    sticker:     { src: "sticker.jpg",           alt: " figura do projeto" },
-    hero:        { src: "caveira.jpg",              alt: "engenhariabiomédica" },
+    sticker:     { src: "sticker.jpg",           alt: "Figura do projeto Mulheres que Movem o Futuro" },
+    hero:        { src: "caveira.jpg",              alt: "Ilustração de engenharia biomédica" },
     contexto:    { src: "contexto.jpg",          alt: "contexto" },
     acao1:       { src: "nasescolas.jpg",     alt: "Mentoria nas escolas" },
     acao2:       { src: "igualdade.jpg",  alt: "Combate ao preconceito de gênero" },
     acao3:       { src: "mulhermec.jpg",      alt: "Equidade no mercado de trabalho" },
     ada:         { src: "ada-lovelace.jpg",      alt: "Retrato de Ada Lovelace" },
     mary:        { src: "maryjackson.jpg",       alt: "Retrato de Mary Jackson" },
-    elsie:       { src: "elsie.jpg",     alt: "Retrato de Elsie" },
+    elsie:       { src: "elsie.jpg",     alt: "Retrato de Elsie MacGill" },
     galeria1:   { src: "fotos/galeria-1.jpg",         alt: "Foto da galeria do projeto" },
     galeria2:    { src: "fotos/galeria-2.jpg",         alt: "Foto da galeria do projeto" },
     galeria3:    { src: "fotos/galeria-3.jpg",         alt: "Foto da galeria do projeto" },
@@ -67,7 +70,7 @@ a{color:inherit}
 button,input,textarea,summary{touch-action:manipulation}
 :focus-visible{outline:3px solid var(--pink);outline-offset:3px}
 
-.page{max-width:640px;margin:0 auto;background:var(--paper);min-height:100vh;position:relative}
+.page{max-width:640px;margin:0 auto;background:var(--paper);min-height:100vh;min-height:100dvh;position:relative}
 .container{padding:0 1.25rem}
 .block{padding:3rem 0;overflow-x:clip}
 .block.alt{background:var(--lav)}
@@ -236,9 +239,9 @@ textarea:focus{outline:3px solid var(--pink);outline-offset:2px;border-color:var
 .rank{font-family:var(--hand);font-weight:700;font-size:3rem;line-height:.8;color:var(--pink)}
 .result h3{font-size:1.35rem;margin:0}
 .tag{display:block;font-family:var(--display);font-weight:500;font-size:.9rem;opacity:.8;margin-bottom:.15rem}
-.result.first .bar{background:rgba(255,255,255,.2)}
-.bar{height:6px;border-radius:3px;background:var(--lav-2);margin-bottom:1rem;overflow:hidden}
-.bar i{display:block;height:100%;background:var(--pink);border-radius:3px}
+.result.first .match-bar{background:rgba(255,255,255,.2)}
+.match-bar{height:6px;border-radius:3px;background:var(--lav-2);margin-bottom:1rem;overflow:hidden}
+.match-bar i{display:block;height:100%;background:var(--pink);border-radius:3px}
 .why{font-size:.95rem;margin-top:.75rem;opacity:.9}
 .mulher-destaque{margin-top:1rem;padding:.9rem 1rem;border-radius:10px;background:rgba(255,255,255,.1)}
 .result:not(.first) .mulher-destaque{background:var(--lav)}
@@ -272,7 +275,7 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
   .brand{font-size:1.3rem}
   .menu-btn{width:52px;height:52px}
   .menu{left:auto;right:0;width:300px;top:calc(100% + 10px)}
-  .menu a{padding:0 1.5rem; font_size: 2rem}
+  .menu a{padding:0 1.5rem; font-size:1.25rem}
 
   .banner-title-row{padding:2.5rem 3rem 3.75rem}
   .banner-title{font-size:clamp(3rem,5vw,4.4rem)}
@@ -386,8 +389,8 @@ textarea{border-radius:16px}
 
 .result{border-top:2px solid var(--pink)}
 .result.first{color:var(--paper);border-radius:20px}
-.bar i,.result.first .bar i{background:var(--pink)}
-.result.first .bar{background:rgba(245,240,230,.2)}
+.match-bar i,.result.first .match-bar i{background:var(--pink)}
+.result.first .match-bar{background:rgba(245,240,230,.2)}
 .mulher-destaque{border-radius:14px}
 .result:not(.first) .mulher-destaque{background:#fff}
 .result:not(.first) .rank{color:var(--violet)}
@@ -401,17 +404,17 @@ footer{color:#F4E2DC}
 
 <!-- ============ BANNER DO TOPO ============ -->
 <section class="banner-topo">
-  <img class="banner-img" data-foto="banner" src="" alt="Banner do projeto (pode ser um GIF)">
+  <img class="banner-img" data-foto="banner" src="" alt="Banner do projeto">
   <div class="banner-title-row">
     <h1 class="banner-title">Mulheres que Movem<br>o Futuro</h1>
-    <div class="photo-wrap sticker-wrap"><figure class="photo r-square sticker-frame"><img data-foto="sticker" src="" alt="Selo ou figura do projeto (PNG transparente)"></figure></div>
+    <div class="photo-wrap sticker-wrap"><figure class="photo r-square sticker-frame"><img data-foto="sticker" src="" alt="Selo do projeto"></figure></div>
   </div>
 </section>
 
 <!-- ============ CABEÇALHO ============ -->
 <header class="site-header" id="cabecalho">
   <div class="container bar">
-    <a class="brand" href="#proposta">Mulheres na Engenharia</a>
+    <a class="brand" href="#proposta">Mulheres que Movem o Futuro</a>
     <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
       <span class="lines" aria-hidden="true"><i></i><i></i><i></i></span>
     </button>
@@ -442,7 +445,7 @@ footer{color:#F4E2DC}
         <a class="btn btn-outline-light" href="#descubra">Descubra sua engenharia</a>
       </div>
     </div>
-    <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="hero" src="" alt="Descreva a foto da capa"></figure></div>
+    <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="hero" src="" alt="Foto de capa do projeto"></figure></div>
   </div>
 </section>
 
@@ -454,7 +457,7 @@ footer{color:#F4E2DC}
       <p>Muitas meninas crescem sem ver mulheres engenheiras por perto. Sem essas referências, a engenharia acaba parecendo "coisa de menino", e elas desistem antes mesmo de tentar.</p>
       <p>Isso tem custo para todo mundo: menos mulheres na área significa menos ideias, menos talentos e soluções que não pensam em metade da população. Ada, Mary e Elsie mostram que a capacidade nunca foi o problema.</p>
     </div>
-    <div class="photo-wrap"><figure class="photo r-wide"><img data-foto="contexto" src="" alt="Descreva a foto desta seção"></figure></div>
+    <div class="photo-wrap"><figure class="photo r-wide"><img data-foto="contexto" src="" alt="Foto ilustrando o tema do projeto"></figure></div>
   </div>
 </section>
 
@@ -525,7 +528,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
           <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="ada" src="" alt="Retrato de Ada Lovelace"></figure></div>
           <div class="profile-text">
             <h3>Ada Lovelace</h3>
-            <p class="field">Engenharia de Software e Matemática</p>
+            <p class="field">Matemática e precursora da programação</p>
             <p>Ada Lovelace é reconhecida mundialmente como a primeira programadora da história. Ela escreveu o primeiro algoritmo para ser processado por uma máquina (a Máquina Analítica de Charles Babbage).</p>
             <div class="contrib">
               <h4>Contribuição principal</h4>
@@ -552,11 +555,11 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
 
       <div id="mulher3" class="tab-panel" role="tabpanel">
         <div class="profile">
-          <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="elsie" src="" alt="Retrato de Elsie"></figure></div>
+          <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="elsie" src="" alt="Retrato de Elsie MacGill"></figure></div>
           <div class="profile-text">
-            <h3>Elsie</h3>
+            <h3>Elsie MacGill</h3>
             <p class="field">Engenharia Aeronáutica</p>
-            <p>Elizabeth Muriel Gregory "Elsie" MacGill foi uma pioneira canadense reconhecida mundialmente como a primeira engenheira aeronáutica do mundo e a primeira mulher a projetar uma aeronave comercial. Conhecida pelo apelido de "Queen of the Hurricanes"</p>
+            <p>Elizabeth Muriel Gregory "Elsie" MacGill foi uma pioneira canadense reconhecida mundialmente como a primeira engenheira aeronáutica do mundo e a primeira mulher a projetar uma aeronave comercial. Conhecida pelo apelido de "Queen of the Hurricanes" (Rainha dos Furacões).</p>
             <div class="contrib">
               <h4>Contribuição principal</h4>
               <p>Reestruturação industrial e na liderança da produção em massa do caça Hawker Hurricane, além do desenvolvimento pioneiro de adaptações para voos em climas severos (invernal) durante a Segunda Guerra Mundial.</p>
@@ -572,7 +575,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
 <section id="linha-tempo" class="block">
   <div class="container">
     <div class="section-head">
-      <h2>Evolução da presença feminina na realidade</h2>
+      <h2>Evolução da presença feminina na engenharia</h2>
     </div>
     <ol class="timeline">
       <li>
@@ -660,7 +663,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
 
 <footer>
   <div class="container">
-    <p>Projeto: A Participação Feminina na Engenharia © 2026</p>
+    <p>Projeto: Mulheres que Movem o Futuro © 2026</p>
   </div>
 </footer>
 
@@ -671,6 +674,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
    SCRIPT DO SITE
    ========================================================= */
 
+const SUAVE = !matchMedia('(prefers-reduced-motion: reduce)').matches;
 /* ---------- Link do quiz ---------- */
 document.querySelectorAll('[data-quiz]').forEach(a => { a.href = CONFIG.linkQuiz; });
 
@@ -754,7 +758,7 @@ const INTERESSES = [
   { id:'midia',      grupo:'dia', label:'Fotografia, vídeos e redes sociais', short:'fotos, vídeos e redes sociais',
     kw:['foto','fotografia','video','videos','tiktok','instagram','youtube','influencer','conteudo','edicao'] },
   { id:'games',      grupo:'dia', label:'Jogar videogame', short:'videogames',
-    kw:['videogame','game','games','gamer','console','jogar'] },
+    kw:['videogame','game','games','gamer','console','playstation'] },
   { id:'musica',     grupo:'dia', label:'Música, cantar e tocar instrumentos', short:'música',
     kw:['musica','cantar','violao','piano','instrumento','banda'], ex:['dj','som'] },
   { id:'esportes',   grupo:'dia', label:'Esportes, dança e atividade física', short:'esportes e dança',
@@ -918,7 +922,8 @@ function interessesDoTexto(texto) {
   const palavras = normalizar(texto).split(/[^a-z0-9-]+/).filter(Boolean);
   const achados = [];
   INTERESSES.forEach(it => {
-    const porPrefixo = it.kw.some(k => palavras.some(p => p === k || (k.length > 3 && p.startsWith(k))));
+    const bases = palavras.flatMap(p => [p, p.replace(/s$/, '')]);
+    const porPrefixo = it.kw.some(k => bases.some(p => p === k || (k.length > 5 && p.startsWith(k))));
     const porPalavraInteira = (it.ex || []).some(k => palavras.includes(k));
     if (porPrefixo || porPalavraInteira) achados.push(it.id);
   });
@@ -960,7 +965,7 @@ function mostrar(top, extras) {
       '<div class="result-head"><span class="rank">' + (i + 1) + '</span>' +
       '<div><span class="tag">' + (i === 0 ? 'Melhor combinação' : 'Também combina') + '</span>' +
       '<h3>' + r.e.nome + '</h3></div></div>' +
-      '<div class="bar" aria-hidden="true"><i style="width:' + Math.round(r.score / max * 100) + '%"></i></div>' +
+      '<div class="match-bar" aria-hidden="true"><i style="width:' + Math.round(r.score / max * 100) + '%"></i></div>' +
       '<p>' + r.e.desc + '</p>' +
       '<p class="why">Combina com você por causa de: ' + motivos + '.</p>' +
       mulherHtml +
@@ -993,7 +998,7 @@ btnDescobrir.addEventListener('click', () => {
     return;
   }
   mostrar(top, extras);
-  resultadoEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  resultadoEl.scrollIntoView({ behavior: SUAVE ? 'smooth' : 'auto', block: 'start' });
   resultadoEl.focus({ preventScroll: true });
 });
 
@@ -1005,7 +1010,25 @@ resultadoEl.addEventListener('click', e => {
   atualizarBotao();
   resultadoEl.innerHTML = '';
   resultadoEl.hidden = true;
-  document.getElementById('descubra').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  document.getElementById('descubra').scrollIntoView({ behavior: SUAVE ? 'smooth' : 'auto', block: 'start' });
+});
+
+/* ---------- Abas: ARIA e teclado ---------- */
+abas.forEach(b => {
+  b.id = 'tab-' + b.dataset.tab;
+  document.getElementById(b.dataset.tab).setAttribute('aria-labelledby', b.id);
+});
+function ajustarTabindex() { abas.forEach(b => { b.tabIndex = b.classList.contains('active') ? 0 : -1; }); }
+ajustarTabindex();
+abas.forEach((b, i) => {
+  b.addEventListener('click', ajustarTabindex);
+  b.addEventListener('keydown', e => {
+    let n = null;
+    if (e.key === 'ArrowRight') n = (i + 1) % abas.length;
+    if (e.key === 'ArrowLeft') n = (i - 1 + abas.length) % abas.length;
+    if (n === null) return;
+    e.preventDefault(); abas[n].click(); abas[n].focus();
+  });
 });
 </script>
 </body>
