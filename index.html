@@ -37,8 +37,7 @@ const CONFIG = {
 </script>
 
 <style>
-/* Paleta: Dark Chocolate, Aloewood, Milk Tea, Sakura, Misty Rose,
-   Deep Espresso, Petal Reverie, Ivory Hearth */
+/* cores */
 :root{
   --header-h:64px;
   --ink:#3E2723;          /* Deep Espresso: textos, cabeçalho, rodapé */
@@ -53,7 +52,6 @@ const CONFIG = {
   --muted:#6B4E3F;
   --tape:#F4C9D6;         /* Petal Reverie */
   --dusk:#AA7F66;         /* Milk Tea */
-  --beige:#F5F0E6;
   --display:"Nunito",system-ui,sans-serif;
   --body:"Nunito",system-ui,sans-serif;
   --hand:"Fraunces",Georgia,serif;
@@ -80,7 +78,7 @@ button,input,textarea,summary{touch-action:manipulation}
 .section-head .underline{display:block;width:min(220px,60%);height:10px;margin-bottom:.9rem}
 .section-head p{color:var(--muted)}
 
-/* ============ BOTÕES ============ */
+/* botões */
 .btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;padding:.85rem 1.25rem;
   font-family:var(--display);font-weight:700;font-size:1.05rem;line-height:1.2;text-align:center;
   border-radius:12px;border:2px solid transparent;text-decoration:none;cursor:pointer;
@@ -92,7 +90,7 @@ button,input,textarea,summary{touch-action:manipulation}
 .btn-outline-dark{border-color:var(--ink);color:var(--ink);background:transparent}
 .btn-stack{display:flex;flex-direction:column;gap:.85rem}
 
-/* ============ FOTOS ============ */
+/* fotos */
 .photo{position:relative;margin:0;width:100%;aspect-ratio:var(--ratio,4/3)}
 .photo.r-portrait{--ratio:4/5}
 .photo.r-wide{--ratio:4/3}
@@ -105,7 +103,7 @@ button,input,textarea,summary{touch-action:manipulation}
 .tape{position:absolute;top:-10px;left:50%;transform:translateX(-50%) rotate(-2deg);width:64px;height:22px;
   background:var(--tape);opacity:.85;box-shadow:0 1px 2px rgba(0,0,0,.15);z-index:2}
 
-/* ============ CABEÇALHO E MENU ============ */
+/* cabeçalho e menu */
 .site-header{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;
   border-bottom:3px solid var(--pink);padding-top:env(safe-area-inset-top)}
 .bar{height:var(--header-h);display:flex;align-items:center;justify-content:space-between;background:transparent}
@@ -127,7 +125,7 @@ button,input,textarea,summary{touch-action:manipulation}
 .menu a:first-child{border-top:0}
 .menu a:active{background:rgba(255,255,255,.12)}
 
-/* ============ BANNER DO TOPO ============ */
+/* banner do topo */
 .banner-topo{position:relative;background:var(--violet-deep)}
 .banner-img{display:block;width:100%;aspect-ratio:16/7;object-fit:cover;background:var(--lav-2)}
 .banner-topo::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:22px;background:var(--violet-deep);
@@ -142,24 +140,24 @@ button,input,textarea,summary{touch-action:manipulation}
 .sticker-frame img{border:none;box-shadow:none;background:transparent;border-radius:8px;
   filter:drop-shadow(0 3px 6px rgba(0,0,0,.35))}
 
-/* ============ CAPA (PROPOSTA) ============ */
+/* capa (proposta) */
 .hero{color:#fff;overflow:hidden;padding:2rem 0 3.25rem;background-color:var(--violet-deep)}
 .hero .eyebrow{display:inline-block;font-family:var(--hand);font-size:1.3rem;color:#ffd166;margin-bottom:.25rem;transform:rotate(-2deg)}
 .hero h2.hero-title{font-size:clamp(2.1rem,10vw,3rem);font-weight:800;line-height:1.02;letter-spacing:-.02em;margin-bottom:1.25rem}
 .hero p{color:#e6dcf7;font-size:1.1rem;margin-bottom:1.75rem}
 .hero .btn-stack{margin-bottom:2.5rem}
 
-/* ============ TEXTO + FOTO ============ */
+/* texto + foto */
 .story h2{font-size:clamp(1.9rem,8.5vw,2.6rem);font-weight:800;margin-bottom:1rem}
 .story p+p{margin-top:1rem}
 .story .photo-wrap{margin-top:1.75rem}
 
-/* ============ AÇÕES ============ */
+/* ações */
 .actions{display:flex;flex-direction:column;gap:2.25rem}
 .action h3{font-size:1.4rem;font-weight:700;margin:1rem 0 .4rem}
 .action p{color:var(--muted)}
 
-/* ============ DADOS ============ */
+/* dados */
 .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .stat{background:#fff;border:2px solid var(--ink);border-radius:14px;padding:1.1rem 1rem;text-align:center;
   box-shadow:4px 4px 0 var(--pink)}
@@ -169,7 +167,7 @@ button,input,textarea,summary{touch-action:manipulation}
 .stat-label{display:block;margin-top:.4rem;font-size:.92rem;color:var(--muted)}
 .stats-note{margin-top:1.25rem;font-size:.85rem;color:var(--muted)}
 
-/* ============ ABAS ============ */
+/* abas */
 .segment{position:sticky;top:calc(var(--header-h) + env(safe-area-inset-top));z-index:5;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;
   background:var(--lav-2);border-radius:14px;padding:4px;margin-bottom:.75rem}
 .tab-btn{min-height:50px;border:0;border-radius:10px;background:transparent;font-family:var(--display);font-weight:700;font-size:1rem;
@@ -185,7 +183,7 @@ button,input,textarea,summary{touch-action:manipulation}
 .contrib{margin-top:1.5rem;background:var(--lav);border-radius:10px;padding:1.15rem 1.25rem}
 .contrib h4{font-size:1.05rem;font-weight:700;margin-bottom:.4rem}
 
-/* ============ LINHA DO TEMPO ============ */
+/* linha do tempo */
 .timeline{list-style:none;margin-left:.5rem;padding-left:1.5rem;border-left:3px dashed var(--line)}
 .timeline li{position:relative;padding-bottom:2rem}
 .timeline li:last-child{padding-bottom:0}
@@ -194,7 +192,7 @@ button,input,textarea,summary{touch-action:manipulation}
 .year{display:block;font-family:var(--hand);font-weight:700;font-size:1.9rem;line-height:1.1;color:var(--violet);margin-bottom:.25rem}
 .timeline strong{background:linear-gradient(transparent 62%,rgba(247,37,133,.32) 62%)}
 
-/* ============ DESCUBRA SUA ENGENHARIA ============ */
+/* descubra sua engenharia */
 .finder h3{font-size:1.25rem;font-weight:700;margin-bottom:.35rem}
 .dica{font-family:var(--display);font-size:.95rem;color:var(--muted);margin-bottom:1.25rem}
 .grupo-titulo{font-family:var(--hand);font-size:1.35rem;font-weight:700;color:var(--violet);margin:1.75rem 0 .6rem}
@@ -251,18 +249,18 @@ textarea:focus{outline:3px solid var(--pink);outline-offset:2px;border-color:var
 .results-note{font-size:.95rem;color:var(--muted)}
 .results-note a{color:var(--violet);font-weight:600}
 
-/* ============ GALERIA ============ */
+/* galeria */
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;padding:8px}
 .gallery .g1{grid-column:span 2;--ratio:4/3}
 
-/* ============ CHAMADA FINAL ============ */
+/* chamada final */
 .cta{background:var(--violet);color:#fff;padding:3.25rem 0}
 .cta h2{font-size:clamp(1.9rem,8.5vw,2.6rem);font-weight:800;margin-bottom:.75rem}
 .cta p{color:#eadff9;margin-bottom:1.75rem}
 
 footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(safe-area-inset-bottom));font-family:var(--display);font-size:.95rem}
 
-/* ============ RESPONSIVO PARA TABLET/PC ============ */
+/* responsivo para tablet/pc */
 @media (min-width:900px){
   :root{--header-h:68px}
   .page{max-width:1180px;box-shadow:0 0 60px rgba(0,0,0,.25)}
@@ -321,9 +319,7 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
   .page{max-width:1320px}
 }
 
-/* =========================================================
-   ESTILO (cores, fontes, cantos, sombras)
-   ========================================================= */
+/* estilo (cores, fontes, cantos, sombras) */
 h1,h2,h3,h4,.brand,.stat-num{font-family:var(--serif);letter-spacing:-.01em}
 h2,h3{font-weight:800}
 .banner-title{font-family:var(--serif);font-style:italic;font-weight:800;font-size:clamp(2.3rem,10.5vw,3.1rem);
@@ -398,7 +394,7 @@ textarea{border-radius:16px}
 .cta h2{color:var(--paper)}
 footer{color:#F4E2DC}
 
-/* ============ CRÉDITO DAS FOTOS ============ */
+/* crédito das fotos */
 .foto-ref{margin:.4rem 0 0;padding:0 .25rem;font-size:.72rem;line-height:1.3;color:var(--muted)}
 .foto-vert{position:absolute;right:11px;bottom:16px;z-index:2;writing-mode:vertical-rl;transform:rotate(180deg);
   font-family:var(--body);font-size:.6rem;font-weight:600;letter-spacing:.03em;line-height:1;white-space:nowrap;
@@ -408,7 +404,7 @@ footer{color:#F4E2DC}
 <body>
 <div class="page">
 
-<!-- ============ BANNER DO TOPO ============ -->
+<!-- banner do topo -->
 <section class="banner-topo">
   <img class="banner-img" data-foto="banner" src="" alt="Banner do projeto">
   <div class="banner-title-row">
@@ -417,7 +413,7 @@ footer{color:#F4E2DC}
   </div>
 </section>
 
-<!-- ============ CABEÇALHO ============ -->
+<!-- cabeçalho -->
 <header class="site-header" id="cabecalho">
   <div class="container bar">
     <a class="brand" href="#proposta">Mulheres que Movem o Futuro</a>
@@ -438,7 +434,7 @@ footer{color:#F4E2DC}
 
 <main>
 
-<!-- ============ 1. CAPA: PROPOSTA DE INTERVENÇÃO ============ -->
+<!-- 1. capa: proposta de intervenção -->
 <section id="proposta" class="hero">
   <div class="container">
     <div class="hero-text">
@@ -455,7 +451,7 @@ footer{color:#F4E2DC}
   </div>
 </section>
 
-<!-- ============ 2. TEXTO + FOTO: O PROBLEMA ============ -->
+<!-- 2. texto + foto: o problema -->
 <section id="contexto" class="block">
   <div class="container story">
     <div class="story-text">
@@ -467,7 +463,7 @@ footer{color:#F4E2DC}
   </div>
 </section>
 
-<!-- ============ 3. DADOS ============ -->
+<!-- 3. dados -->
 <section id="dados" class="block alt">
   <div class="container">
     <div class="section-head">
@@ -484,7 +480,7 @@ footer{color:#F4E2DC}
   </div>
 </section>
 
-<!-- ============ 4. AS AÇÕES DA PROPOSTA ============ -->
+<!-- 4. as ações da proposta -->
 <section id="acao" class="block">
   <div class="container">
     <div class="section-head">
@@ -512,7 +508,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
   </div>
 </section>
 
-<!-- ============ 5. PIONEIRAS EM ABAS ============ -->
+<!-- 5. pioneiras em abas -->
 <section id="mulheres" class="block alt">
   <div class="container">
     <div class="section-head">
@@ -577,7 +573,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
   </div>
 </section>
 
-<!-- ============ 6. LINHA DO TEMPO ============ -->
+<!-- 6. linha do tempo -->
 <section id="linha-tempo" class="block">
   <div class="container">
     <div class="section-head">
@@ -604,7 +600,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
   </div>
 </section>
 
-<!-- ============ 7. DESCUBRA SUA ENGENHARIA ============ -->
+<!-- 7. descubra sua engenharia -->
 <section id="descubra" class="block alt">
   <div class="container finder">
     <div class="section-head">
@@ -630,7 +626,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
   </div>
 </section>
 
-<!-- ============ 8. GALERIA ============ -->
+<!-- 8. galeria -->
 <section id="galeria" class="block">
   <div class="container">
     <div class="section-head">
@@ -647,7 +643,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
   </div>
 </section>
 
-<!-- ============ 9. CHAMADA FINAL ============ -->
+<!-- 9. chamada final -->
 <section class="cta" id="quiz">
   <div class="container">
     <h2>Agora é a sua vez de participar</h2>
@@ -679,15 +675,13 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
 </div><!-- /page -->
 
 <script>
-/* =========================================================
-   SCRIPT DO SITE
-   ========================================================= */
+/* script do site */
 
 const SUAVE = !matchMedia('(prefers-reduced-motion: reduce)').matches;
-/* ---------- Link do quiz ---------- */
+/* link do quiz */
 document.querySelectorAll('[data-quiz]').forEach(a => { a.href = CONFIG.linkQuiz; });
 
-/* ---------- Placeholder genérico (só imagem, sem texto) ---------- */
+/* placeholder genérico (só imagem, sem texto) */
 const PLACEHOLDER = "data:image/svg+xml;utf8," + encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect width="400" height="400" fill="#F8E3E8"/>' +
   '<circle cx="200" cy="150" r="46" fill="#EBD3CC"/><rect x="90" y="230" width="220" height="110" rx="14" fill="#EBD3CC"/></svg>'
@@ -701,7 +695,7 @@ document.querySelectorAll('img[data-foto]').forEach(img => {
   teste.src = foto.src;
 });
 
-/* ---------- Menu ---------- */
+/* menu */
 const menuBtn = document.getElementById('menu-btn');
 const menu = document.getElementById('menu');
 function fecharMenu() {
@@ -718,7 +712,7 @@ document.addEventListener('click', e => {
 });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') fecharMenu(); });
 
-/* ---------- Abas das pioneiras (toque ou deslize) ---------- */
+/* abas das pioneiras (toque ou deslize) */
 const abas = [...document.querySelectorAll('.tab-btn')];
 abas.forEach(btn => btn.addEventListener('click', () => {
   abas.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
@@ -745,9 +739,7 @@ areaAbas.addEventListener('touchend', e => {
   if (prox >= 0 && prox < abas.length) abas[prox].click();
 }, { passive: true });
 
-/* =========================================================
-   DESCUBRA SUA ENGENHARIA
-   ========================================================= */
+/* descubra sua engenharia */
 const GRUPOS = [
   { id: 'dia',     titulo: 'No seu dia a dia' },
   { id: 'ciencia', titulo: 'Ciência, tecnologia e construção' }
@@ -887,7 +879,7 @@ const ENGENHARIAS = [
     mulher:{nome:'Jennifer Doudna', bio:'Bioquímica premiada com o Nobel por co-desenvolver a técnica de edição genética CRISPR.'} }
 ];
 
-/* --- monta os botões de interesses, por grupo --- */
+/* monta os botões de interesses, por grupo */
 const chipsEl = document.getElementById('chips');
 GRUPOS.forEach(g => {
   const titulo = document.createElement('h4');
@@ -1022,7 +1014,7 @@ resultadoEl.addEventListener('click', e => {
   document.getElementById('descubra').scrollIntoView({ behavior: SUAVE ? 'smooth' : 'auto', block: 'start' });
 });
 
-/* ---------- Abas: ARIA e teclado ---------- */
+/* abas: aria e teclado */
 abas.forEach(b => {
   b.id = 'tab-' + b.dataset.tab;
   document.getElementById(b.dataset.tab).setAttribute('aria-labelledby', b.id);
