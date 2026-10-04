@@ -397,6 +397,12 @@ textarea{border-radius:16px}
 
 .cta h2{color:var(--paper)}
 footer{color:#F4E2DC}
+
+/* ============ CRÉDITO DAS FOTOS ============ */
+.foto-ref{margin:.4rem 0 0;padding:0 .25rem;font-size:.72rem;line-height:1.3;color:var(--muted)}
+.foto-vert{position:absolute;right:11px;bottom:16px;z-index:2;writing-mode:vertical-rl;transform:rotate(180deg);
+  font-family:var(--body);font-size:.6rem;font-weight:600;letter-spacing:.03em;line-height:1;white-space:nowrap;
+  color:#fff;background:rgba(62,39,35,.65);padding:.35rem .18rem;border-radius:6px;pointer-events:none}
 </style>
 </head>
 <body>
@@ -445,7 +451,7 @@ footer{color:#F4E2DC}
         <a class="btn btn-outline-light" href="#descubra">Descubra sua engenharia</a>
       </div>
     </div>
-    <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="hero" src="" alt="Foto de capa do projeto"></figure></div>
+    <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="hero" src="" alt="Foto de capa do projeto"><span class="foto-vert" aria-hidden="true">Foto da internet</span></figure></div>
   </div>
 </section>
 
@@ -457,7 +463,7 @@ footer{color:#F4E2DC}
       <p>Muitas meninas crescem sem ver mulheres engenheiras por perto. Sem essas referências, a engenharia acaba parecendo "coisa de menino", e elas desistem antes mesmo de tentar.</p>
       <p>Isso tem custo para todo mundo: menos mulheres na área significa menos ideias, menos talentos e soluções que não pensam em metade da população. Ada, Mary e Elsie mostram que a capacidade nunca foi o problema.</p>
     </div>
-    <div class="photo-wrap"><figure class="photo r-wide"><img data-foto="contexto" src="" alt="Foto ilustrando o tema do projeto"></figure></div>
+    <div class="photo-wrap"><figure class="photo r-wide"><img data-foto="contexto" src="" alt="Foto ilustrando o tema do projeto"></figure><p class="foto-ref">Foto: [referência da imagem]</p></div>
   </div>
 </section>
 
@@ -466,15 +472,15 @@ footer{color:#F4E2DC}
   <div class="container">
     <div class="section-head">
       <h2>Os números da desigualdade</h2>
-      <p>blablabla</p>
+      <p>A engenharia ainda é uma das áreas com menos mulheres no Brasil, mas o cenário muda devagar.</p>
     </div>
     <div class="stats-grid">
-      <div class="stat"><span class="stat-num">[24%]</span><span class="stat-label">[das engenheiras registradas no Brasil são mulheres]</span></div>
-      <div class="stat"><span class="stat-num">[1945]</span><span class="stat-label">[ano da 1ª formatura de uma mulher negra em engenharia no Brasil]</span></div>
-      <div class="stat"><span class="stat-num">[+15pp]</span><span class="stat-label">[de crescimento da presença feminina desde o ano 2000]</span></div>
-      <div class="stat"><span class="stat-num">[1 em 4]</span><span class="stat-label">[estudantes de engenharia no Brasil é mulher]</span></div>
+      <div class="stat"><span class="stat-num">20%</span><span class="stat-label">das profissionais registradas no Sistema Confea/Crea são mulheres (2023)</span></div>
+      <div class="stat"><span class="stat-num">1945</span><span class="stat-label">ano em que Enedina Alves Marques se formou, a primeira engenheira negra do Brasil</span></div>
+      <div class="stat"><span class="stat-num">30%</span><span class="stat-label">das matrículas em cursos de engenharia eram de mulheres em 2011 (Inep)</span></div>
+      <div class="stat"><span class="stat-num">18% → 20%</span><span class="stat-label">das profissionais registradas eram mulheres em 2018 e em 2023: avanço lento (Confea)</span></div>
     </div>
-    <p class="stats-note">[Confira e atualize esses números com uma fonte oficial antes de publicar.]</p>
+    <p class="stats-note">Fontes: Confea (2022 e 2023) e Inep, citado em pesquisa acadêmica. Veja as Referências.</p>
   </div>
 </section>
 
@@ -483,21 +489,21 @@ footer{color:#F4E2DC}
   <div class="container">
     <div class="section-head">
       <h2>Como mudar esses números?</h2>
-      <p>[Resuma em uma ou duas frases o plano da sua proposta.]</p>
+      <p>Nossa proposta une mentoria, conscientização e equidade para aproximar meninas e mulheres da engenharia.</p>
     </div>
     <div class="actions">
       <article class="action">
-        <div class="photo-wrap tilt-l"><figure class="photo r-wide"><img data-foto="acao1" src="" alt="Mentoria nas escolas"></figure></div>
+        <div class="photo-wrap tilt-l"><figure class="photo r-wide"><img data-foto="acao1" src="" alt="Mentoria nas escolas"><span class="foto-vert" aria-hidden="true">Foto da internet</span></figure></div>
         <h3>Mentoria nas escolas</h3>
         <p>Em ambientes de ensino técnico, como o IFBA, mentorias com professoras, engenheiras ou profissionais da área de STEM podem ajudar as alunas a conhecer diferentes áreas, tirar dúvidas e ter contato com referências femininas, contribuindo para o problema da falta de representatividade.</p>
       </article>
       <article class="action">
-        <div class="photo-wrap tilt-r"><figure class="photo r-wide"><img data-foto="acao2" src="" alt="Combate ao preconceito de gênero"></figure></div>
+        <div class="photo-wrap tilt-r"><figure class="photo r-wide"><img data-foto="acao2" src="" alt="Combate ao preconceito de gênero"><span class="foto-vert" aria-hidden="true">Foto da internet</span></figure></div>
         <h3>Combate ao preconceito de gênero</h3>
         <p>Promover ações de conscientização nas escolas e nos ambientes profissionais para combater estereótipos e preconceitos, mostrando que a engenharia não é uma profissão determinada pelo gênero.</p>
       </article>
       <article class="action">
-        <div class="photo-wrap tilt-l"><figure class="photo r-wide"><img data-foto="acao3" src="" alt="Equidade no mercado de trabalho"></figure></div>
+        <div class="photo-wrap tilt-l"><figure class="photo r-wide"><img data-foto="acao3" src="" alt="Equidade no mercado de trabalho"><span class="foto-vert" aria-hidden="true">Foto da internet</span></figure></div>
         <h3>Equidade no mercado de trabalho</h3>
         <p>
 Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos, salários e possibilidades de crescimento profissional, contribuindo para reduzir desigualdades presentes no ambiente de trabalho.</p>
@@ -525,7 +531,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
 
       <div id="mulher1" class="tab-panel active" role="tabpanel">
         <div class="profile">
-          <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="ada" src="" alt="Retrato de Ada Lovelace"></figure></div>
+          <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="ada" src="" alt="Retrato de Ada Lovelace"></figure><p class="foto-ref">Foto: [referência da imagem]</p></div>
           <div class="profile-text">
             <h3>Ada Lovelace</h3>
             <p class="field">Matemática e precursora da programação</p>
@@ -540,14 +546,14 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
 
       <div id="mulher2" class="tab-panel" role="tabpanel">
         <div class="profile">
-          <div class="photo-wrap tilt-r"><figure class="photo r-portrait"><img data-foto="mary" src="" alt="Retrato de Mary Jackson"></figure></div>
+          <div class="photo-wrap tilt-r"><figure class="photo r-portrait"><img data-foto="mary" src="" alt="Retrato de Mary Jackson"></figure><p class="foto-ref">Foto: [referência da imagem]</p></div>
           <div class="profile-text">
             <h3>Mary Jackson</h3>
             <p class="field">Matemática e engenheira aeroespacial</p>
             <p>Mary Winston Jackson foi uma matemática e engenheira aeroespacial norte-americana que fez história ao se tornar a primeira engenheira negra da NASA em 1958.</p>
             <div class="contrib">
               <h4>Contribuição principal</h4>
-              <p>Enquanto a sua mente ajudou a colocar aeronaves no espaço em velocidades supersônicas, o seu legado social garantiu que as próximas gerações de mulheres e negros não precisassem ir à justiça para estudar engenharia.</p>
+              <p>Sua pesquisa em aerodinâmica ajudou a colocar aeronaves em velocidades supersônicas, e sua trajetória abriu caminho para outras mulheres e pessoas negras na engenharia.</p>
             </div>
           </div>
         </div>
@@ -555,11 +561,11 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
 
       <div id="mulher3" class="tab-panel" role="tabpanel">
         <div class="profile">
-          <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="elsie" src="" alt="Retrato de Elsie MacGill"></figure></div>
+          <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="elsie" src="" alt="Retrato de Elsie MacGill"></figure><p class="foto-ref">Foto: [referência da imagem]</p></div>
           <div class="profile-text">
             <h3>Elsie MacGill</h3>
             <p class="field">Engenharia Aeronáutica</p>
-            <p>Elizabeth Muriel Gregory "Elsie" MacGill foi uma pioneira canadense reconhecida mundialmente como a primeira engenheira aeronáutica do mundo e a primeira mulher a projetar uma aeronave comercial. Conhecida pelo apelido de "Queen of the Hurricanes" (Rainha dos Furacões).</p>
+            <p>Elizabeth Muriel Gregory "Elsie" MacGill foi uma pioneira canadense a primeira mulher do mundo a obter mestrado em engenharia aeronáutica (1929) e a primeira mulher a projetar uma aeronave. Conhecida pelo apelido de "Queen of the Hurricanes" (Rainha dos Furacões).</p>
             <div class="contrib">
               <h4>Contribuição principal</h4>
               <p>Reestruturação industrial e na liderança da produção em massa do caça Hawker Hurricane, além do desenvolvimento pioneiro de adaptações para voos em climas severos (invernal) durante a Segunda Guerra Mundial.</p>
@@ -584,15 +590,15 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
       </li>
       <li>
         <span class="year">Ano 1945</span>
-        <p>Primeiras formações acadêmicas de mulheres negras e pioneiras no Brasil e América Latina. A participação feminina ainda não atingia 1% dos formandos em engenharia.</p>
+        <p>Enedina Alves Marques se forma em Engenharia Civil pela UFPR e se torna a primeira engenheira negra do Brasil e a primeira mulher formada em engenharia no Paraná.</p>
       </li>
       <li>
-        <span class="year">Ano 2000</span>
-        <p>O percentual de mulheres graduadas em cursos de engenharia no Brasil chega próximo a 15%, impulsionado pelo maior acesso à universidade e programas de incentivo.</p>
+        <span class="year">Ano 2011</span>
+        <p>Segundo o Inep, as mulheres chegam a cerca de 30% das matrículas nos cursos de engenharia, impulsionadas pelo maior acesso ao ensino superior.</p>
       </li>
       <li>
         <span class="year">Atualmente</span>
-        <p>Hoje em dia, as mulheres representam cerca de <strong>20% a 24%</strong> dos profissionais registrados nos conselhos de engenharia. O avanço ocorre principalmente por conta do combate a estereótipos desde a infância e políticas corporativas de diversidade.</p>
+        <p>Hoje em dia, as mulheres representam cerca de <strong>20%</strong> dos profissionais registrados no Sistema Confea/Crea (2023). O avanço é lento: eram 18% em 2018.</p>
       </li>
     </ol>
   </div>
@@ -629,14 +635,14 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
   <div class="container">
     <div class="section-head">
       <h2>Galeria do projeto</h2>
-      <p>[Escreva uma legenda curta para as fotos: eventos, oficinas, entrevistas, bastidores do projeto.]</p>
+      <p>Momentos e registros do nosso projeto.</p>
     </div>
     <div class="gallery">
-      <figure class="photo r-square g1"><img data-foto="galeria1" src="" alt="Foto da galeria do projeto"></figure>
-      <figure class="photo r-square"><img data-foto="galeria2" src="" alt="Foto da galeria do projeto"></figure>
-      <figure class="photo r-square"><img data-foto="galeria3" src="" alt="Foto da galeria do projeto"></figure>
-      <figure class="photo r-square"><img data-foto="galeria4" src="" alt="Foto da galeria do projeto"></figure>
-      <figure class="photo r-square"><img data-foto="galeria5" src="" alt="Foto da galeria do projeto"></figure>
+      <figure class="photo r-square g1"><img data-foto="galeria1" src="" alt="Foto da galeria do projeto"><span class="foto-vert" aria-hidden="true">Foto da internet</span></figure>
+      <figure class="photo r-square"><img data-foto="galeria2" src="" alt="Foto da galeria do projeto"><span class="foto-vert" aria-hidden="true">Foto da internet</span></figure>
+      <figure class="photo r-square"><img data-foto="galeria3" src="" alt="Foto da galeria do projeto"><span class="foto-vert" aria-hidden="true">Foto da internet</span></figure>
+      <figure class="photo r-square"><img data-foto="galeria4" src="" alt="Foto da galeria do projeto"><span class="foto-vert" aria-hidden="true">Foto da internet</span></figure>
+      <figure class="photo r-square"><img data-foto="galeria5" src="" alt="Foto da galeria do projeto"><span class="foto-vert" aria-hidden="true">Foto da internet</span></figure>
     </div>
   </div>
 </section>
@@ -655,9 +661,12 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
 <details class="refs">
   <summary>Referências</summary>
   <ul class="refs-list">
-    <li>[Nome da fonte 1 — link ou referência completa]</li>
-    <li>[Nome da fonte 2 — link ou referência completa]</li>
-    <li>[Nome da fonte 3 — link ou referência completa]</li>
+    <li><a href="https://www.confea.org.br/200-mil-mulheres-compoem-o-sistema-confeacrea-e-mutua" target="_blank" rel="noopener">Confea. 200 mil mulheres compõem o Sistema Confea/Crea e Mútua (2022).</a></li>
+    <li><a href="https://www.tupi.fm/?p=924354" target="_blank" rel="noopener">Super Rádio Tupi. Mulheres ganham espaço na engenharia (dados do Confea, 2022).</a></li>
+    <li><a href="https://diariodocomercio.com.br/gestao/cresce-mulheres-mercado-engenharia/" target="_blank" rel="noopener">Diário do Comércio. Cresce a presença de mulheres no mercado de engenharia (dados do Confea, 2023).</a></li>
+    <li><a href="https://www.redalyc.org/journal/4966/496659123011/496659123011.pdf" target="_blank" rel="noopener">A presença das mulheres na engenharia: um lugar de disputas (dados do Inep, 2011).</a></li>
+    <li><a href="https://www.curitiba.pr.gov.br/noticias/engenheira-enedina-alves-marques-ganhara-monumento-na-rua-xv-de-novembro/65943" target="_blank" rel="noopener">Prefeitura de Curitiba. Enedina Alves Marques.</a></li>
+    <li><a href="https://encyclopediecanadienne.ca/article/elizabeth-muriel-gregory-macgill" target="_blank" rel="noopener">The Canadian Encyclopedia. Elsie MacGill.</a></li>
   </ul>
 </details>
 
