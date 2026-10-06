@@ -30,8 +30,7 @@ const CONFIG = {
     galeria1:   { src: "foto1.jpg",         alt: "Foto da galeria do projeto" },
     galeria2:    { src: "foto2.jpg",         alt: "Foto da galeria do projeto" },
     galeria3:    { src: "foto3.jpg",         alt: "Foto da galeria do projeto" },
-    galeria4:    { src: "foto4.jpg",         alt: "Foto da galeria do projeto" },
-    galeria5:    { src: "foto5.jpg",         alt: "Foto da galeria do projeto" }
+    galeria4:    { src: "foto1 (1).jpg",         alt: "Foto da galeria do projeto" }
   }
 };
 </script>
@@ -251,7 +250,6 @@ textarea:focus{outline:3px solid var(--pink);outline-offset:2px;border-color:var
 
 /* galeria */
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;padding:8px}
-.gallery .g1{grid-column:span 2;--ratio:4/3}
 
 /* chamada final */
 .cta{background:var(--violet);color:#fff;padding:3.25rem 0}
@@ -297,18 +295,17 @@ footer{background:var(--ink);color:#d9cdee;padding:1.75rem 0 calc(1.75rem + env(
   .actions{flex-direction:row;flex-wrap:wrap}
   .action{flex:1 1 300px}
 
-  /* pioneiras */
+  /* pioneiras: foto ao lado do texto */
   .tabs .segment{max-width:460px}
   .profile{display:flex;align-items:flex-start;gap:2.75rem}
   .profile .photo-wrap{flex:0 0 260px;margin:0}
   .profile-text{flex:1}
   .profile h3{margin-top:0}
 
-  /* galeria coluna */
+  /* galeria com mais colunas */
   .gallery{grid-template-columns:repeat(4,1fr)}
-  .gallery .g1{grid-column:span 2}
 
-  /* descubra sua engenharia barra */
+  /* descubra sua engenharia: barra de ação não gruda tanto na borda */
   .finder-bar{margin-left:0;margin-right:0;border-radius:14px 14px 0 0}
 
   /* chamada final centralizada */
@@ -434,7 +431,7 @@ footer{color:#F4E2DC}
 
 <main>
 
-<!-- proposta de intervenção -->
+<!-- 1. capa: proposta de intervenção -->
 <section id="proposta" class="hero">
   <div class="container">
     <div class="hero-text">
@@ -443,7 +440,6 @@ footer{color:#F4E2DC}
       <p>
          O objetivo do nosso projeto é incentivar e aproximar meninas e mulheres para as diversas áreas da engenharia. Acreditamos que, trazendo as histórias de mulheres fortes que foram importantes para a engenharia, conseguimos combater as desigualdades de gênero e os diversos estereótipos que infelizmente ainda existem na STEM.      </p>
       <div class="btn-stack">
-        <a class="btn btn-pink" href="#" data-quiz target="_blank" rel="noopener">Responder o quiz do projeto</a>
         <a class="btn btn-outline-light" href="#descubra">Descubra sua engenharia</a>
       </div>
     </div>
@@ -451,7 +447,7 @@ footer{color:#F4E2DC}
   </div>
 </section>
 
-<!--problema -->
+<!-- 2. texto + foto: o problema -->
 <section id="contexto" class="block">
   <div class="container story">
     <div class="story-text">
@@ -459,11 +455,11 @@ footer{color:#F4E2DC}
       <p>Muitas meninas crescem sem ver mulheres engenheiras por perto. Sem essas referências, a engenharia acaba parecendo "coisa de menino", e elas desistem antes mesmo de tentar.</p>
       <p>Isso tem custo para todo mundo: menos mulheres na área significa menos ideias, menos talentos e soluções que não pensam em metade da população. Ada, Mary e Elsie mostram que a capacidade nunca foi o problema.</p>
     </div>
-    <div class="photo-wrap"><figure class="photo r-wide"><img data-foto="contexto" src="" alt="Foto ilustrando o tema do projeto"></figure><p class="foto-ref">Foto: [referência da imagem]</p></div>
+    <div class="photo-wrap"><figure class="photo r-wide"><img data-foto="contexto" src="" alt="Foto ilustrando o tema do projeto"></figure><p class="foto-ref"> Edwiges Maria Becker, primeira mulher a obter um diploma no Brasil.</p></div>
   </div>
 </section>
 
-<!--  dados -->
+<!-- 3. dados -->
 <section id="dados" class="block alt">
   <div class="container">
     <div class="section-head">
@@ -474,13 +470,13 @@ footer{color:#F4E2DC}
       <div class="stat"><span class="stat-num">20%</span><span class="stat-label">das profissionais registradas no Sistema Confea/Crea são mulheres (2023)</span></div>
       <div class="stat"><span class="stat-num">1945</span><span class="stat-label">ano em que Enedina Alves Marques se formou, a primeira engenheira negra do Brasil</span></div>
       <div class="stat"><span class="stat-num">30%</span><span class="stat-label">das matrículas em cursos de engenharia eram de mulheres em 2011 (Inep)</span></div>
-      <div class="stat"><span class="stat-num">18% → 20%</span><span class="stat-label">das profissionais registradas eram mulheres em 2018 e em 2023: avanço lento (Confea)</span></div>
+      <div class="stat"><span class="stat-num">18% → 20%</span><span class="stat-label">das profissionais registradas eram mulheres em 2018 e em 2023 (Confea)</span></div>
     </div>
-    <p class="stats-note">Fontes: Confea (2022 e 2023) e Inep, citado em pesquisa acadêmica. Veja as Referências.</p>
+    <p class="stats-note">Fontes: Confea (2022 e 2023) e Inep.</p>
   </div>
 </section>
 
-<!-- as ações da proposta -->
+<!-- 4. as ações da proposta -->
 <section id="acao" class="block">
   <div class="container">
     <div class="section-head">
@@ -508,7 +504,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
   </div>
 </section>
 
-<!-- pioneiras  -->
+<!-- 5. pioneiras em abas -->
 <section id="mulheres" class="block alt">
   <div class="container">
     <div class="section-head">
@@ -527,7 +523,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
 
       <div id="mulher1" class="tab-panel active" role="tabpanel">
         <div class="profile">
-          <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="ada" src="" alt="Retrato de Ada Lovelace"></figure><p class="foto-ref"> Daguerreotipo de Ada Lovelace, feita por volta de 1843</p></div>
+          <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="ada" src="" alt="Retrato de Ada Lovelace"></figure><p class="foto-ref">Daguerreótipo de Ada Lovelace, feito por volta de 1843</p></div>
           <div class="profile-text">
             <h3>Ada Lovelace</h3>
             <p class="field">Matemática e precursora da programação</p>
@@ -542,7 +538,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
 
       <div id="mulher2" class="tab-panel" role="tabpanel">
         <div class="profile">
-          <div class="photo-wrap tilt-r"><figure class="photo r-portrait"><img data-foto="mary" src="" alt="Retrato de Mary Jackson"></figure><p class="foto-ref"> Mary Jackson trabalhando no Centro de Pesquisa Langley, em 1977.</p></div>
+          <div class="photo-wrap tilt-r"><figure class="photo r-portrait"><img data-foto="mary" src="" alt="Retrato de Mary Jackson"></figure><p class="foto-ref">Mary Jackson trabalhando no Centro de Pesquisa Langley, em 1977.</p></div>
           <div class="profile-text">
             <h3>Mary Jackson</h3>
             <p class="field">Matemática e engenheira aeroespacial</p>
@@ -557,7 +553,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
 
       <div id="mulher3" class="tab-panel" role="tabpanel">
         <div class="profile">
-          <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="elsie" src="" alt="Retrato de Elsie MacGill"></figure><p class="foto-ref"> Elsie MacGill inspecionando o cockpit de uma aeronave.</p></div>
+          <div class="photo-wrap tilt-l"><figure class="photo r-portrait"><img data-foto="elsie" src="" alt="Retrato de Elsie MacGill"></figure><p class="foto-ref">Elsie MacGill inspecionando o cockpit de uma aeronave.</p></div>
           <div class="profile-text">
             <h3>Elsie MacGill</h3>
             <p class="field">Engenharia Aeronáutica</p>
@@ -573,7 +569,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
   </div>
 </section>
 
-<!-- linha do tempo -->
+<!-- 6. linha do tempo -->
 <section id="linha-tempo" class="block">
   <div class="container">
     <div class="section-head">
@@ -600,12 +596,12 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
   </div>
 </section>
 
-<!-- descubra sua engenharia -->
+<!-- 7. descubra sua engenharia -->
 <section id="descubra" class="block alt">
   <div class="container finder">
     <div class="section-head">
       <h2>Descubra sua engenharia</h2>
-      <p>Escolha as atividades que mais combinam com seus interesses e descubra quais áreas da engenharia podem ter relação com eles. É apenas uma forma de conhecer possiblidades, você pode seguir quakquer caminho! ♡  </p>
+      <p>Escolha as atividades que mais combinam com seus interesses e descubra quais áreas da engenharia podem ter relação com eles. É apenas uma forma de conhecer possibilidades, você pode seguir qualquer caminho! ♡</p>
     </div>
 
     <h3>O que você gosta de fazer?</h3>
@@ -634,20 +630,19 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
       <p>Momentos e registros do nosso projeto.</p>
     </div>
     <div class="gallery">
-      <figure class="photo r-square g1"><img data-foto="galeria1" src="" alt="Foto da galeria do projeto"></figure>
+      <figure class="photo r-square"><img data-foto="galeria1" src="" alt="Foto da galeria do projeto"></figure>
       <figure class="photo r-square"><img data-foto="galeria2" src="" alt="Foto da galeria do projeto"></figure>
       <figure class="photo r-square"><img data-foto="galeria3" src="" alt="Foto da galeria do projeto"></figure>
       <figure class="photo r-square"><img data-foto="galeria4" src="" alt="Foto da galeria do projeto"></figure>
-      <figure class="photo r-square"><img data-foto="galeria5" src="" alt="Foto da galeria do projeto"></figure>
     </div>
   </div>
 </section>
 
-<!-- quiz -->
+<!-- 9. chamada final -->
 <section class="cta" id="quiz">
   <div class="container">
     <h2>Agora é a sua vez de participar</h2>
-    <p>Responda o quiz do projeto e conte o que você pensa sobre o tema.</p>
+    <p>Responda o quiz do projeto e conte o que você entendeu sobre o que apresentamos.</p>
     <a class="btn btn-pink" href="#" data-quiz target="_blank" rel="noopener">Responder o quiz do projeto</a>
   </div>
 </section>
@@ -668,7 +663,7 @@ Incentivar oportunidades iguais para mulheres na engenharia, com acesso a cargos
 
 <footer>
   <div class="container">
-    <p>Projeto: Mulheres que Movem o Futuro SNCT IFBA-Campus SIMÔES FILHO 2026</p>
+    <p>Projeto: Mulheres que Movem o Futuro SNCT IFBA-Campus SIMÕES FILHO 2026</p>
   </div>
 </footer>
 
@@ -681,7 +676,7 @@ const SUAVE = !matchMedia('(prefers-reduced-motion: reduce)').matches;
 /* link do quiz */
 document.querySelectorAll('[data-quiz]').forEach(a => { a.href = CONFIG.linkQuiz; });
 
-/* placeholder  */
+/* placeholder genérico (só imagem, sem texto) */
 const PLACEHOLDER = "data:image/svg+xml;utf8," + encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect width="400" height="400" fill="#F8E3E8"/>' +
   '<circle cx="200" cy="150" r="46" fill="#EBD3CC"/><rect x="90" y="230" width="220" height="110" rx="14" fill="#EBD3CC"/></svg>'
@@ -879,7 +874,7 @@ const ENGENHARIAS = [
     mulher:{nome:'Jennifer Doudna', bio:'Bioquímica premiada com o Nobel por co-desenvolver a técnica de edição genética CRISPR.'} }
 ];
 
-/* monta os botões de interesses, por grupo */
+/* botões de interesses */
 const chipsEl = document.getElementById('chips');
 GRUPOS.forEach(g => {
   const titulo = document.createElement('h4');
@@ -1014,7 +1009,7 @@ resultadoEl.addEventListener('click', e => {
   document.getElementById('descubra').scrollIntoView({ behavior: SUAVE ? 'smooth' : 'auto', block: 'start' });
 });
 
-/* abas: aria e teclado */
+/* abas*/
 abas.forEach(b => {
   b.id = 'tab-' + b.dataset.tab;
   document.getElementById(b.dataset.tab).setAttribute('aria-labelledby', b.id);
